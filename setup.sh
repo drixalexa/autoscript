@@ -26,13 +26,13 @@ exit 0
 fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://raw.githubusercontent.com/senowahyu62/freesc/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
 wget https://raw.githubusercontent.com/senowahyu62/freesc/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
 wget https://raw.githubusercontent.com/senowahyu62/freesc/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
@@ -41,9 +41,9 @@ wget https://raw.githubusercontent.com/senowahyu62/freesc/main/ins-vt.sh && chmo
 wget https://raw.githubusercontent.com/senowahyu62/freesc/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://raw.githubusercontent.com/senowahyu62/freesc/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Install Neofetch 
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/geo.sh && chmod +x geo.sh && ./geo.sh && dos2unix /usr/bin/geo.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/geo.sh && chmod +x geo.sh && ./geo.sh && dos2unix /usr/bin/geo.sh
 #install edu
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/websocket.sh && chmod +x websocket.sh && ./websocket.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/websocket.sh && chmod +x websocket.sh && ./websocket.sh
 wget https://raw.githubusercontent.com/senowahyu62/freesc/main/edu.sh && chmod +x edu.sh && screen -S edu ./edu.sh
 
 rm -f /root/ssh-vpn.sh
@@ -60,7 +60,7 @@ rm -f /root/edu.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
-Documentation=https://geoganteng.tech
+Documentation=https://drixalexa.tech
 
 [Service]
 Type=oneshot
@@ -120,12 +120,12 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   - Dev/Main                : DA ORAKLE"  | tee -a log-install.txt
-echo "   - Telegram                : T.me/daorakle"  | tee -a log-install.txt
-echo "   - Instagram               : @harjarlah"  | tee -a log-install.txt
-echo "   - Whatsapp                : 08037680771"  | tee -a log-install.txt
-echo "   - Facebook                : https://www.facebook.com/Harjarlah" | tee -a log-install.txt
-echo "------------------Script Created By orakle-----------------" | tee -a log-install.txt
+echo "   - Dev/Main                : DrixAlexa"  | tee -a log-install.txt
+echo "   - Telegram                : T.me/drixalexa"  | tee -a log-install.txt
+echo "   - Instagram               : @drixalexa"  | tee -a log-install.txt
+echo "   - Whatsapp                : 08993150143"  | tee -a log-install.txt
+echo "   - Facebook                : https://www.facebook.com/DrixAlexa" | tee -a log-install.txt
+echo "------------------Script Created By DRIXALEXA-----------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 10 Sec"
 sleep 10
