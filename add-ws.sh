@@ -40,7 +40,7 @@ cat>/etc/v2ray/$user-tls.json<<EOF
       "id": "${uuid}",
       "aid": "2",
       "net": "ws",
-      "path": "/senovpn",
+      "path": "/drixalex",
       "type": "none",
       "host": "",
       "tls": "tls"
@@ -55,7 +55,7 @@ cat>/etc/v2ray/$user-none.json<<EOF
       "id": "${uuid}",
       "aid": "2",
       "net": "ws",
-      "path": "/senovpn",
+      "path": "/drixalex",
       "type": "none",
       "host": "",
       "tls": "none"
