@@ -274,9 +274,10 @@ Domen="$(cat /etc/v2ray/domain)"
 
 # Echoing Result
 echo -e ""
-echo -e "In Here Is Your VPS Information : " | lolcat 
-echo "-------------------------------------------------------------------------------" | lolcat 
-echo "Operating System Information :" | lolcat 
+echo -e "INI ADALAH INFORMASI VPS ANDA : " 
+echo -e"-------------------------------------------------------------------------------" 
+echo -e" OPRATION SYSTEM INFORMASI :" 
+echo -e "------------------------------------------------------------------------------"
 echo -e "VPS Type    : $typevps"
 echo -e "OS Arch     : $tipeos2"
 echo -e "Hostname    : $HOSTNAME"
@@ -287,21 +288,24 @@ echo -e "OS BASE     : $basedong"
 echo -e "OS TYPE     : Linux / Unix"
 echo -e "Bash Ver    : $versibash"
 echo -e "Kernel Ver  : $kernelku"
-echo "-------------------------------------------------------------------------------" | lolcat 
-echo "Hardware Information :" | lolcat 
+echo -e"-------------------------------------------------------------------------------" 
+echo -e" HARDWARE INFORMASI :"
+echo -e "------------------------------------------------------------------------------"
 echo -e "Processor   : $tipeprosesor"
 echo -e "Proc Core   : $totalcore"
 echo -e "Virtual     : $typevps"
 echo -e "Cpu Usage   : $cpu_usage"
-echo "-------------------------------------------------------------------------------" | lolcat 
-echo "System Status / System Information :" | lolcat 
+echo -e"-------------------------------------------------------------------------------" 
+echo -e" SYSTEM STATUS / SYSTEM INFORMASI :" 
+echo -e"------------------------------------------------------------------------------"
 echo -e "Uptime      : $uptime ( From VPS Booting )"
 echo -e "Total RAM   : ${totalram}MB"
 echo -e "Avaible     : ${MEMORY}MB"
 echo -e "Download    : $downloadsize GB ( From Startup / VPS Booting )"
 echo -e "Upload      : $uploadsize GB ( From Startup / VPS Booting )"
-echo "-------------------------------------------------------------------------------" | lolcat 
-echo "Internet Service Provider Information :" | lolcat 
+echo -e"-------------------------------------------------------------------------------"
+echo -e" INTERNET SERVICE PROVIDER INFORMASI :"
+echo -e "------------------------------------------------------------------------------"
 echo -e "Public IP   : $MYIP"
 echo -e "Domain      : $Domen"
 echo -e "ISP Name    : $NAMAISP"
@@ -309,15 +313,17 @@ echo -e "Region      : $REGION "
 echo -e "Country     : $COUNTRY"
 echo -e "City        : $CITY "
 echo -e "Time Zone   : $WAKTUE"
-echo "-------------------------------------------------------------------------------" | lolcat 
-echo "Time & Date & Location & Coordinate Information :" | lolcat 
+echo -e"-------------------------------------------------------------------------------" 
+echo -e" TIME/DATE & LOKASI & COORDINATE INFORMASI :"
+echo -e "------------------------------------------------------------------------------"
 echo -e "Location    : $COUNTRY"
 echo -e "Coordinate  : $koordinat"
 echo -e "Time Zone   : $WAKTUE"
 echo -e "Date        : $harini"
 echo -e "Time        : $jam ( WIB )"
-echo "-------------------------------------------------------------------------------" | lolcat 
-echo "System Status Information :" | lolcat 
+echo -e "-------------------------------------------------------------------------------" 
+echo -e " SYSTEM VPN STATUS INFORMASI " 
+echo -e "-------------------------------------------------------------------------------"
 echo -e "SSH / Tun   : $status_ssh"
 echo -e "OpenVPN     : $status_openvpn"
 echo -e "Dropbear    : $status_beruangjatuh"
@@ -337,5 +343,5 @@ echo -e "SS TLS      : $status_ss_tls"
 echo -e "SS HTTP     : $status_ss_http"
 echo -e "Trojan      : $status_virus_trojan"
 echo -e "Wireguard   : $status_wg"
-echo "------------------------------------------------------------------------" | lolcat 
+echo -e"------------------------------------------------------------------------"
 echo ""
