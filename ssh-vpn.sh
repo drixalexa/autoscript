@@ -1,5 +1,5 @@
 #!/bin/bash
-# By geo
+# By drixalexa
 #
 # ==================================================
 
@@ -15,9 +15,9 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=geoganteng.tech
-organizationalunit=geoganteng.tech
-commonname=geoganteng.tech
+organization=drixalexa.tech
+organizationalunit=drixalexa.tech
+commonname=drixalexa.tech
 email=paoandest@gmail.com
 
 # simple password minimal
@@ -216,7 +216,7 @@ echo 'Config file is at /usr/local/ddos/ddos.conf'
 echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
 
 # banner /etc/issue.net
-wget -O /etc/issue.net "https://raw.githubusercontent.com/senowahyu62/freesc/main/banner.conf"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/drixalexa/autoscript/main/banner.conf"
 echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
@@ -239,9 +239,9 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/senowahyu62/freesc/main/add-host.sh"
-wget -O about "https://raw.githubusercontent.com/senowahyu62/freesc/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu.sh"
+wget -O add-host "https://raw.githubusercontent.com/drixalexa/autoscript/main/add-host.sh"
+wget -O about "https://raw.githubusercontent.com/drixalexa/autoscript/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/drixalexa/autoscript/main/menu.sh"
 wget -O usernew "https://raw.githubusercontent.com/senowahyu62/freesc/main/usernew.sh"
 wget -O trial "https://raw.githubusercontent.com/senowahyu62/freesc/main/trial.sh"
 wget -O hapus "https://raw.githubusercontent.com/senowahyu62/freesc/main/hapus.sh"
@@ -250,7 +250,7 @@ wget -O delete "https://raw.githubusercontent.com/senowahyu62/freesc/main/delete
 wget -O cek "https://raw.githubusercontent.com/senowahyu62/freesc/main/cek.sh"
 wget -O restart "https://raw.githubusercontent.com/senowahyu62/freesc/main/restart.sh"
 wget -O speedtest "https://raw.githubusercontent.com/senowahyu62/freesc/main/speedtest_cli.py"
-wget -O info "https://raw.githubusercontent.com/senowahyu62/freesc/main/info.sh"
+wget -O info "https://raw.githubusercontent.com/drixalexa/autoscript/main/info.sh"
 wget -O ram "https://raw.githubusercontent.com/senowahyu62/freesc/main/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/senowahyu62/freesc/main/renew.sh"
 wget -O autokill "https://raw.githubusercontent.com/senowahyu62/freesc/main/autokill.sh"
@@ -274,7 +274,7 @@ wget -O cfd "https://raw.githubusercontent.com/senowahyu62/freesc/main/cfd.sh"
 wget -O cff "https://raw.githubusercontent.com/senowahyu62/freesc/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/senowahyu62/freesc/main/cfh.sh"
 wget -O autoreboot "https://raw.githubusercontent.com/senowahyu62/freesc/main/autoreboot.sh"
-wget -O bannerku "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu-all/bannerku"
+wget -O bannerku "https://raw.githubusercontent.com/drixalexa/autoscript/main/menu-all/bannerku"
 wget -O bbr "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu-all/bbr.sh"
 wget -O menu "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu-all/menu.sh"
 wget -O trojaan "https://raw.githubusercontent.com/senowahyu62/freesc/main/menu-all/trojaan.sh"
