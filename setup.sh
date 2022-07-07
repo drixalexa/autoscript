@@ -1,28 +1,27 @@
 #!/bin/bash
-
 if [ "${EUID}" -ne 0 ]; then
-		echo "You need to run this script as root"
+		echo "Kamu Butuh Akses Root!!"
 		exit 1
 fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
-		echo "OpenVZ is not supported"
+		echo "OpenVZ Tidak Mendukungg"
 		exit 1
 fi
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://raw.githubusercontent.com/senowahyu62/freesc/main/ipvps | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/drixalexa/autoscript/main/ipvps | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
-echo -e "${green}Permission Accepted...${NC}"
+echo -e "${green}Aksess Di Terimaa...${NC}"
 else
-echo -e "${red}Permission Denied!${NC}";
-echo "Please Contact Admin"
+echo -e "${red}Aksess Tidak Di Terima!${NC}";
+echo "Mohon Hubungi Admin"
 rm -f setup.sh
 exit 0
 fi
 if [ -f "/etc/v2ray/domain" ]; then
-echo "Script Already Installed"
+echo "Script Sudah Terinstall"
 exit 0
 fi
 mkdir /var/lib/premium-script;
@@ -30,22 +29,22 @@ echo "IP=" >> /var/lib/premium-script/ipvps.conf
 wget https://raw.githubusercontent.com/drixalexa/autoscript/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://raw.githubusercontent.com/drixalexa/autoscript/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 #install ssr
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://raw.githubusercontent.com/drixalexa/autoscript/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
 #installwg
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscrit/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
 #install L2TP
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 # Install Neofetch 
-wget https://raw.githubusercontent.com/drixalexa/autoscript/main/geo.sh && chmod +x geo.sh && ./geo.sh && dos2unix /usr/bin/geo.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscrit/main/geo.sh && chmod +x geo.sh && ./geo.sh && dos2unix /usr/bin/geo.sh
 #install edu
 wget https://raw.githubusercontent.com/drixalexa/autoscript/main/websocket.sh && chmod +x websocket.sh && ./websocket.sh
-wget https://raw.githubusercontent.com/senowahyu62/freesc/main/edu.sh && chmod +x edu.sh && screen -S edu ./edu.sh
+wget https://raw.githubusercontent.com/drixalexa/autoscript/main/edu.sh && chmod +x edu.sh && screen -S edu ./edu.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -61,7 +60,7 @@ rm -f /root/edu.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
-Documentation=https://drixalexa.tech
+Documentation=https://drixalexavpn.tech
 
 [Service]
 Type=oneshot
@@ -73,13 +72,13 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
-wget -O /etc/set.sh "https://raw.githubusercontent.com/senowahyu62/freesc/main/set.sh"
+wget -O /etc/set.sh "https://raw.githubusercontent.com/drixalexa/autoscript/main/set.sh"
 chmod +x /etc/set.sh
 history -c
 echo "1.2" > /home/ver
 clear
 echo " "
-echo "Installation has been completed!!"
+echo "Berhasil Memasang AutoScript!!"
 echo " "
 echo "============-Autoscript Premium-=============" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
@@ -121,12 +120,12 @@ echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
-echo "   - Dev/Main                : DrixAlexa"  | tee -a log-install.txt
-echo "   - Telegram                : T.me/drixalexa"  | tee -a log-install.txt
+echo "   - Dev/Main                : SHINIGAMI VPN"  | tee -a log-install.txt
+echo "   - Telegram                : T.me/shinigamivpn"  | tee -a log-install.txt
 echo "   - Instagram               : @drixalexa"  | tee -a log-install.txt
 echo "   - Whatsapp                : 08993150143"  | tee -a log-install.txt
 echo "   - Facebook                : https://www.facebook.com/DrixAlexa" | tee -a log-install.txt
-echo "------------------Script Created By DRIXALEXA-----------------" | tee -a log-install.txt
+echo "------------------Script Rebuild By DrixAlexa-----------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 10 Sec"
 sleep 10
