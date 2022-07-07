@@ -1,4 +1,5 @@
 #!/bin/bash
+if #!/bin/bash
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
@@ -7,51 +8,6 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
 fi
-
-#run update before start installing ,
-#for ensure if forget update
-apt-get update -y
-apt-get upgrade -y
-apt dist-upgrade -y
-
-# install wget and curl
-apt -y install wget curl
-apt-get install screen -y 
-
-# remove any old and not use 
-apt-get autoclean && apt-get autoremove -y
-
-clear
-
-cd
-
-# Checking VPS ( if fresh or used vps before excute another )..
-if [[ ! -e /etc/v2ray ]]; then
-    echo -e "          ${yellow}Hello Stranger , thanks using my-repo${NC}" 
-    echo -e "    ${red}It's seem you have installed kind vpn-script before"
-    echo -e "  Auto-Script will remove your current configuration folder"
-    echo -e "to avoid problem while auto-script running configuration setup${NC}"
-    sleep 5
-    rm -rf /etc/v2ray
-    cd
-    mkdir /etc/v2ray
-else
-    mkdir /etc/v2ray
-fi
-if [[ ! -e /var/lib/premium-script/ipvps.conf ]]; then
-    echo -e "          ${blue}Hello Stranger , thanks using my-repo${NC}" 
-    echo -e "    ${red}It's seem you have installed kind vpn script before"
-    echo -e "  Auto-Script will remove your current configuration folder"
-    echo -e "to avoid problem while auto-script running configuration setup${NC}"
-    sleep 3
-    rm -rf /var/lib/premium-script
-    echo " system has deleted current /var/lib/Matap "
-    sleep 1
-    echo " system create new directory for new auto-script installation"
-    sleep 1
-
-clear
-
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
@@ -64,7 +20,10 @@ echo -e "${red}Permission Denied!${NC}";
 echo "Please Contact Admin"
 rm -f setup.sh
 exit 0
-cd
+fi
+if [ -f "/etc/v2ray/domain" ]; then
+echo "Script Already Installed"
+exit 0
 fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
