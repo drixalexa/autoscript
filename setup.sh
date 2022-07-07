@@ -6,6 +6,9 @@ fi
 if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ Tidak Mendukungg"
 		exit 1
+rm -f setup.sh
+rm -rf /etc/v2ray
+
 fi
 red='\e[1;31m'
 green='\e[0;32m'
@@ -17,7 +20,6 @@ echo -e "${green}Aksess Di Terimaa...${NC}"
 else
 echo -e "${red}Aksess Tidak Di Terima!${NC}";
 echo "Mohon Hubungi Admin"
-rm -f setup.sh
 exit 0
 fi
 if [ -f "/etc/v2ray/domain" ]; then
