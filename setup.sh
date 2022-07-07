@@ -8,19 +8,6 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		exit 1
 fi
 
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://raw.githubusercontent.com/senowahyu62/freesc/main/ipvps | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-echo -e "${red}Permission Denied!${NC}";
-echo "Please Contact Admin"
-rm -f setup.sh
-exit 0
-
 #run update before start installing ,
 #for ensure if forget update
 apt-get update -y
@@ -62,6 +49,22 @@ if [[ ! -e /var/lib/premium-script/ipvps.conf ]]; then
     sleep 1
     echo " system create new directory for new auto-script installation"
     sleep 1
+
+clear
+
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+MYIP=$(wget -qO- icanhazip.com);
+IZIN=$( curl https://raw.githubusercontent.com/senowahyu62/freesc/main/ipvps | grep $MYIP )
+if [ $MYIP = $MYIP ]; then
+echo -e "${green}Permission Accepted...${NC}"
+else
+echo -e "${red}Permission Denied!${NC}";
+echo "Please Contact Admin"
+rm -f setup.sh
+exit 0
+cd
 fi
 mkdir /var/lib/premium-script;
 echo "IP=" >> /var/lib/premium-script/ipvps.conf
